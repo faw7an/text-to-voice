@@ -1,21 +1,25 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="I6yskbCmQM4rq9IX8iDgKfBSeIMfrAhLyOSqp87LO-w" />
-    <title>Text to speech Converter</title>
+    <title>Text to Speech Converter</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    
+    <!-- Content Security Policy to restrict resources to self -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.10/purify.min.js" integrity="sha384-pmZn7ROcL8rDlOZ9+OiHq3k/gi9RGDSKsk3fI6tQczMuFJc+Fx1Z+OxeCrIAtdYm" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
    <div class="hero">
     <h1>Text to Speech <span>Converter</span></h1>
-    <textarea name="" placeholder="Write anything here..." id=""></textarea>
+    <textarea name="" placeholder="Write anything here..." id="text-input"></textarea>
     <div class="row">
-        <select>
-
-        </select>
-        <button class="btn"><img src="images/play.png" alt="" srcset="">Listen</button>
+        <select id="voiceSelect"></select>
+        <button class="btn"><img src="images/play.png" alt="Play">Listen</button>
     </div>
    </div>
 </body>
